@@ -132,7 +132,7 @@ export default function HomePage() {
                   >
                     <div className="w-full h-64 lg:h-30 relative">
                       <Image
-                        src={`https://backend.ptdahliaglobalindo.id/${item.thumbnail}`}
+                        src={`https://backend.ptdahliaglobalindo.id${item.thumbnail}`}
                         alt={item.title}
                         className="w-full h-full object-cover"
                         width={500}
