@@ -51,6 +51,7 @@ export default function DetailArtikel() {
             className="w-full object-cover h-48 sm:h-64 md:h-[320px]"
             width={500}
             height={500}
+            unoptimized
           />
           <button
             onClick={() => window.history.back()}

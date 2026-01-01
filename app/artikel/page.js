@@ -146,6 +146,7 @@ export default function Artikel() {
                         className="w-full h-full object-cover absolute inset-0"
                         width={500}
                         height={300}
+                        unoptimized
                       />
                     </div>
                     <div className="p-4 flex flex-col justify-between flex-1">
