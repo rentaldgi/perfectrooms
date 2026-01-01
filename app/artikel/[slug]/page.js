@@ -51,7 +51,6 @@ export default function DetailArtikel() {
             className="w-full object-cover h-48 sm:h-64 md:h-[320px]"
             width={500}
             height={500}
-            unoptimized
           />
           <button
             onClick={() => window.history.back()}
@@ -65,7 +64,7 @@ export default function DetailArtikel() {
         <div className="relative z-10 -mt-32 sm:-mt-40 md:-mt-48 px-4 sm:px-6 md:px-8 lg:px-20 mb-12">
           <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur-sm border border-[#C08931] rounded-md shadow-lg py-6 sm:py-8 px-4 sm:px-6 md:px-8">
             <Image
-              src={`https://backend.ptdahliaglobalindo.id/${artikel.data.thumbnail}`}
+              src={`https://backend.ptdahliaglobalindo.id${artikel.data.thumbnail}`}
               alt="Gambar Artikel"
               className="w-full h-48 sm:h-64 md:h-72 object-cover rounded mb-6"
               width={500}

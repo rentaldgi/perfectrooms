@@ -141,7 +141,7 @@ export default function Artikel() {
                   <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 shadow-xl flex flex-col h-[320px]">
                     <div className="w-full h-40 relative overflow-hidden">
                       <Image
-                        src={`https://backend.ptdahliaglobalindo.id/${article.thumbnail}`}
+                        src={`https://backend.ptdahliaglobalindo.id${article.thumbnail}`}
                         alt={article.title}
                         className="w-full h-full object-cover absolute inset-0"
                         width={500}

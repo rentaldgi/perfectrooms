@@ -96,7 +96,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-[2100px] h-auto lg:h-[500px] overflow-hidden">
               <div className="w-full h-64 lg:h-80 relative">
                 <Image
-                  src={`https://backend.ptdahliaglobalindo.id/${articles[0].thumbnail}`}
+                  src={`https://backend.ptdahliaglobalindo.id${articles[0].thumbnail}`}
                   alt={articles[0].title}
                   className="w-full h-full object-cover"
                   width={500}
