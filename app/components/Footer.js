@@ -120,10 +120,10 @@ export default function Footer() {
             <h4 className="font-semibold text-gray-800 mb-2">Kontak Kami</h4>
             <p className="mb-1">
               <Link
-                href="mailto:ptdahliglobalindo@gmail.com"
+                href="#"
                 className="hover:text-yellow-500"
               >
-                ptdahliglobalindo@gmail.com
+                dahliagroup.id
               </Link>
             </p>
             <p>

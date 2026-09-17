@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Image from "next/image";
+import AnimatePage from "./components/AnimatePage";
 
 function formatTanggalIndo(tanggalString) {
   const tanggal = new Date(tanggalString);
@@ -28,6 +29,7 @@ export default function HomePage() {
   return (
     <div className="bg-gray-100">
       <Navbar />
+      <AnimatePage>
 
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center text-white overflow-hidden">
@@ -51,13 +53,13 @@ export default function HomePage() {
             </p>
             <div className="mt-6 flex justify-end gap-2 flex-wrap">
               <a
-                href="/unit"
+                href="/DaftarUnit"
                 className="bg-[#C08931] text-white px-6 py-2 rounded-l-full shadow hover:bg-yellow-300"
               >
                 Lihat Apartemen
               </a>
               <a
-                href="/kontak"
+                href="/Kontak"
                 className="bg-[#C08931] text-white px-6 py-2 rounded-r-full shadow hover:bg-yellow-300"
               >
                 Hubungi Kami
@@ -276,6 +278,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      </AnimatePage>
       <Footer />
     </div>
   );
