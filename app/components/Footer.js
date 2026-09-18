@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="relative bg-white text-black overflow-hidden">
-      {/* Ornamen bunga kiri atas */}
       <Image
         src="/images/footerkanan.png"
         alt="Flower Top Left"
