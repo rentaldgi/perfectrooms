@@ -13,7 +13,6 @@ export default function Footer() {
         height={50}
       />
 
-      {/* Ornamen bunga kanan bawah */}
       <Image
         src="/images/footerkiri.png"
         alt="Flower Bottom Right"
