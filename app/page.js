@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Image from "next/image";
 import AnimatePage from "./components/AnimatePage";
+import { apiFetch, assetUrl, ENTITY } from "@/client/ApiClient";
 
 function formatTanggalIndo(tanggalString) {
   const tanggal = new Date(tanggalString);
@@ -19,7 +20,7 @@ export default function HomePage() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("https://backend.ptdahliaglobalindo.id/article?entity=SEWA_APARTMENT")
+    apiFetch(`/article?entity=${ENTITY}`)
       .then((res) => res.json())
       .then((data) => {
         setArticles(data.slice(0, 3)); // Ambil 3 artikel pertama
@@ -98,7 +99,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg w-full lg:w-[2100px] h-auto lg:h-[500px] overflow-hidden">
               <div className="w-full h-64 lg:h-80 relative">
                 <Image
-                  src={`https://backend.ptdahliaglobalindo.id${articles[0].thumbnail}`}
+                  src={assetUrl(articles[0].thumbnail)}
                   alt={articles[0].title}
                   className="w-full h-full object-cover"
                   width={500}
@@ -134,7 +135,7 @@ export default function HomePage() {
                   >
                     <div className="w-full h-64 lg:h-30 relative">
                       <Image
-                        src={`https://backend.ptdahliaglobalindo.id${item.thumbnail}`}
+                        src={assetUrl(item.thumbnail)}
                         alt={item.title}
                         className="w-full h-full object-cover"
                         width={500}
