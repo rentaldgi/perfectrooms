@@ -8,6 +8,7 @@ import MapsKontak from "../components/MapsKontak";
 import Notification from "../components/Notification";
 import AnimatePage from "../components/AnimatePage";
 import Image from "next/image";
+import { apiFetch } from "@/client/ApiClient";
 
 const Kontak = () => {
   const [form, setForm] = useState({
@@ -53,14 +54,11 @@ const Kontak = () => {
     setIsSending(true);
 
     try {
-      const response = await fetch(
-        "https://backend.ptdahliaglobalindo.id/kontak",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
-        }
-      );
+      const response = await apiFetch("/kontak", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
       const result = await response.json();
 

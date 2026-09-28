@@ -8,6 +8,7 @@ import { HiArrowLeft } from "react-icons/hi";
 import AnimatePage from "@/app/components/AnimatePage";
 import { FaSpinner } from "react-icons/fa";
 import Image from "next/image";
+import { apiFetch, assetUrl } from "@/client/ApiClient";
 
 export default function DetailArtikel() {
   const { slug } = useParams();
@@ -15,7 +16,7 @@ export default function DetailArtikel() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://backend.ptdahliaglobalindo.id/article/${slug}`)
+    apiFetch(`/article/${slug}`)
       .then((res) => res.json())
       .then((data) => setArtikel(data))
       .catch((err) => {
@@ -64,7 +65,7 @@ export default function DetailArtikel() {
         <div className="relative z-10 -mt-32 sm:-mt-40 md:-mt-48 px-4 sm:px-6 md:px-8 lg:px-20 mb-12">
           <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur-sm border border-[#C08931] rounded-md shadow-lg py-6 sm:py-8 px-4 sm:px-6 md:px-8">
             <Image
-              src={`https://backend.ptdahliaglobalindo.id${artikel.data.thumbnail}`}
+              src={assetUrl(artikel.data.thumbnail)}
               alt="Gambar Artikel"
               className="w-full h-48 sm:h-64 md:h-72 object-cover rounded mb-6"
               width={500}
